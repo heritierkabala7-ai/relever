@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon relevé académique — Simulation personnelle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <p class="eyebrow">ESPACE PERSONNEL</p>
+      <h1>Mon relevé académique</h1>
+      <p class="sub">Année académique 2025–2026 · Données saisies à partir du relevé fourni</p>
+    </div>
+    <button id="printBtn" class="print-btn">Imprimer / PDF</button>
+  </header>
+
+  <main>
+    <section class="notice">
+      <strong>Simulation personnelle — document non officiel.</strong>
+      Ce tableau sert à consulter et modifier tes données. Il ne remplace pas un relevé délivré par l'université.
+    </section>
+
+    <section class="student">
+      <div><span>Étudiant(e)</span><strong>NZAYALA ANGALIA GEMIMA</strong></div>
+      <div><span>Matricule</span><strong>AED67225</strong></div>
+      <div><span>Établissement</span><strong>UPC — donnée retranscrite</strong></div>
+    </section>
+
+    <div class="toolbar">
+      <p>Tu peux modifier les notes UE et les crédits. Les résultats se recalculent automatiquement.</p>
+      <button id="resetBtn" class="secondary">Rétablir les valeurs de la photo</button>
+    </div>
+
+    <section class="semester">
+      <h2>Premier semestre</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code UE</th><th>Intitulé</th><th>Crédits UE</th><th>Note UE / 20</th><th>Décision</th></tr></thead>
+          <tbody id="sem1"></tbody>
+        </table>
+      </div>
+      <div class="summary" id="summary1"></div>
+    </section>
+
+    <section class="semester">
+      <h2>Deuxième semestre</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Code UE</th><th>Intitulé</th><th>Crédits UE</th><th>Note UE / 20</th><th>Décision</th></tr></thead>
+          <tbody id="sem2"></tbody>
+        </table>
+      </div>
+      <div class="summary" id="summary2"></div>
+    </section>
+
+    <section class="annual">
+      <h2>Résultats de l'année</h2>
+      <div class="annual-grid" id="annualSummary"></div>
+    </section>
+    <p class="footnote">Règle de calcul utilisée dans cette simulation : une UE est considérée validée si sa note est au moins égale à 10/20. Les crédits obtenus sont la somme des crédits des UE validées. Vérifie toujours les règles officielles de ton établissement.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
